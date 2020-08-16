@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="custom/custom.css">
+    <title>Trainer | By emkh</title>
+</head>
+
+<body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <div class="wrapper container">
+        <div id="carouselMain"
+             class="carousel slide"
+             data-ride="carousel"
+             data-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="header"> </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <input type="text"
+                                   readonly
+                                   class="expression_to_evaluate form-control"
+                                   id="expression_to_evaluate"
+                                   value="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <input type="text"
+                                   readonly
+                                   class="expression_input form-control"
+                                   id="expression_input"
+                                   value="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <input class="btn btn-primary btn-block"
+                                   type="button"
+                                   value="Settings"
+                                   onclick="$('.carousel').carousel(1)">
+                        </div>
+                        <div class="col-3">
+                            <input class="btn btn-primary btn-block" type="button" value="Next">
+                        </div>
+                        <div class="col-3">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <button class="btn btn-primary btn-block" value='clear'>C</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-primary btn-block" value='remove'>←</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-primary btn-block btn-math-operations" value='Check'>Check</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <input class="btn btn-primary btn-block" type="button" value="7">
+                        </div>
+                        <div class="col-3">
+                            <input class="btn btn-primary btn-block" type="button" value="8">
+                        </div>
+                        <div class="col-3">
+                            <input class="btn btn-primary btn-block" type="button" value="9">
+                        </div>
+                        <div class="col-3">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <input class="btn btn-primary btn-block" type="button" value="4">
+                        </div>
+                        <div class="col-3">
+                            <input class="btn btn-primary btn-block" type="button" value="5">
+                        </div>
+                        <div class="col-3">
+                            <input class="btn btn-primary btn-block" type="button" value="6">
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn-primary btn-block btn-math-operations" value='-'>-</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <input class="btn btn-primary btn-block" type="button" value="1">
+                        </div>
+                        <div class="col-3">
+                            <input class="btn btn-primary btn-block" type="button" value="2">
+                        </div>
+                        <div class="col-3">
+                            <input class="btn btn-primary btn-block" type="button" value="3">
+                        </div>
+                        <div class="col-3">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <input class="btn btn-primary btn-block"
+                                   type="button"
+                                   value="0"
+                                   onclick="void(0)">
+                        </div>
+                        <div class="col-3">
+                            <input class="btn btn-primary btn-block" type="button" value=".">
+                        </div>
+                        <div class="col-3">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="footer d-none d-sm-none d-md-block col-12"> Try to use mobile</div>
+                        <div class="col-12">Swipe (left/right) to open settings</div>
+                        <div class="col-12">V0.1.0</div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-12">Swipe (left/right) to open Trainer</div>
+                    </div>
+                    <div class="row">
+                        <input class="btn btn-primary btn-block"
+                               type="button"
+                               value="Trainer"
+                               onclick="$('.carousel').carousel(0)">
+                    </div>
+                    <div id="Settings">
+                        <div class="row">
+                            <div class="col-6">
+                                Минимальное значение переменых
+                            </div>
+                            <div class="col-6">
+                                <input type="text" class="math_min_val form-control" value="0">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                Максимальное значение переменых
+                            </div>
+                            <div class="col-6">
+                                <input type="text" class="math_max_val form-control" value="100">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                Кратность переменных
+                            </div>
+                            <div class="col-6">
+                                <input type="text" class="math_mod_val form-control" value="25">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                Знаки
+                            </div>
+                            <div class="col-6">
+                                <input type="text" class="math_signs form-control" disabled value="+-">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                Количество переменных
+                            </div>
+                            <div class="col-6">
+                                <input type="text" class="math_count form-control" value="2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="custom/expression.js"></script>
+    <script src="custom/calc.js"></script>
+    <script src="custom/trainer.js"></script>
+    <script src="custom/main.js"></script>
+</body>
+
+</html>
